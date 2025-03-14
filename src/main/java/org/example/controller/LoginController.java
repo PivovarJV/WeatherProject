@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class UsersController {
-    @GetMapping()
-    public String newUser(Model model) {
+public class LoginController {
+    @GetMapping("/login")
+    public String showLoginPage(Model model) {
         model.addAttribute("user", new User());
-        return "user-form";
+        return "sign-in";
     }
 
-    @PostMapping("/save")
-    public String saveUser(@ModelAttribute User user) {
-        return "user-result";
+    @PostMapping("/login")
+    public String login(@ModelAttribute User user) {
+        return "sign-in"; // Или редерект на ошибку или на главнуб стр (sign-in сейчас просто так написан)
     }
 }

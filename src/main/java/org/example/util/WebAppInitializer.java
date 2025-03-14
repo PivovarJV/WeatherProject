@@ -1,5 +1,6 @@
-package org.example.config;
+package org.example.util;
 
+import org.example.config.MvcConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
